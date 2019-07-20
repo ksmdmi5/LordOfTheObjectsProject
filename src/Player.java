@@ -1,9 +1,38 @@
 
 
-public class Player {
+public class Player extends Creature {
 	String playerName = "";
-	private int hitPoints = 50;
-	private int attackPlayer = (int)((Math.random()*5)+1);
+	int potions = 0;
 	
+	public Player() {
+		
+	}
+	
+	public Player(int strength, int MaxHP) {
+		this.setPlayerName(playerName);
+		this.setStrength(5);
+		this.setMaxHP(50);
+			
+	}
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+
+	public int getPotions() {
+		return potions;
+	}
+
+	public void setPotions(int potions) {
+		this.potions = potions;
+	}
+
+	public String getInfo() {
+//		System.out.println(maxHP);
+		return  playerName+" has " +maxHP+ "/"+maxHP;
+	}
 	
 }

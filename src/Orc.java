@@ -1,7 +1,18 @@
 
-public class Orc {
-	private int hitPoints = 45;
-	private int attackOrc = (int)((Math.random()*5)+1); 
+public class Orc extends Creature {		
 	
-	drop sword || armor;
+	public Orc(int strength, int maxHP) {
+		this.setStrength(7);
+		this.setMaxHP(35);
+	
+	}
+	
+	public String getOrc() {
+		System.out.println(maxHP);
+		return super.getInfo() + maxHP + "";
+	}
+	
+	public String orcStats() {
+		return "Orc has "+maxHP+"/"+maxHP;
+	}
 }
