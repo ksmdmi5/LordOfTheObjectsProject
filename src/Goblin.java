@@ -1,5 +1,5 @@
 
-public class Goblin extends Creature{
+public class Goblin {
 	
 	public Goblin() {
 		

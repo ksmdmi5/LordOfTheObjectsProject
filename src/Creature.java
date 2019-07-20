@@ -1,42 +1,42 @@
 
 public class Creature {
-	protected String creature= "";
+	protected String name;
 	protected int strength;
-	protected int currentHP;
+//	protected int currentHP;
 	protected int maxHP;
-	protected boolean isAlive;
+//	protected boolean isAlive;
 	String stats = "";
 
-	public boolean isAlive() {
-		if (currentHP > 0);
-		return isAlive;
-	}
+//	public boolean isAlive() {
+//		if (currentHP > 0);
+//		return isAlive;
+//	}
 
 	public Creature() {
 	}
 
 	
 
-	public Creature(int strength, int currentHP, int maxHP) {
+	public Creature(String name, int strength, int maxHP) {
+		this.name = name;
 		this.strength = strength;
-		this.currentHP = currentHP;
 		this.maxHP = maxHP;
 		
 	}
 	
-	public String getInfo() {
-		return creature+" has "+currentHP+"/"+maxHP;
-	}
+//	public String getInfo() {
+//		return name+" has "+currentHP+"/"+maxHP;
+//	}
 
 //	public Creature() {
 //	}
 
-	public String getCreature() {
-		return creature;
+	public String getName() {
+		return name;
 	}
 
-	public void setCreature(String creature) {
-		this.creature = creature;
+	public void setName(String creature) {
+		this.name = name;
 	}
 
 	public String getStats() {
@@ -55,13 +55,13 @@ public class Creature {
 		this.strength = strength;
 	}
 
-	public int getCurrentHP() {
-		return currentHP;
-	}
-
-	public void setCurrentHP(int currentHP) {
-		this.currentHP = currentHP;
-	}
+//	public int getCurrentHP() {
+//		return currentHP;
+//	}
+//
+//	public void setCurrentHP(int currentHP) {
+//		this.currentHP = currentHP;
+//	}
 
 	public int getMaxHP() {
 		return maxHP;
