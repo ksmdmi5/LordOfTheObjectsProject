@@ -23,13 +23,6 @@ public class Creature {
 		this.maxHP = maxHP;
 		
 	}
-	
-//	public String getInfo() {
-//		return name+" has "+currentHP+"/"+maxHP;
-//	}
-
-//	public Creature() {
-//	}
 
 	public String getName() {
 		return name;
@@ -54,14 +47,6 @@ public class Creature {
 	public void setStrength(int strength) {
 		this.strength = strength;
 	}
-
-//	public int getCurrentHP() {
-//		return currentHP;
-//	}
-//
-//	public void setCurrentHP(int currentHP) {
-//		this.currentHP = currentHP;
-//	}
 
 	public int getMaxHP() {
 		return maxHP;

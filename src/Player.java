@@ -32,7 +32,7 @@ public class Player extends Creature {
 
 	public String getInfo() {
 //		System.out.println(maxHP);
-		return  playerName+" has " +maxHP+ "/"+maxHP;
+		return  playerName+" has " +maxHP+ "/"+maxHP+"HP";
 	}
 	
 }

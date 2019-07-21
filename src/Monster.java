@@ -20,7 +20,7 @@ public Monster() {
 	}
 	
 	public String monsterStats() {
-		return this.name+" has "+maxHP+"/"+maxHP;
+		return this.name+" has "+maxHP+"/"+maxHP+"HP";
 	}
 	
 }
