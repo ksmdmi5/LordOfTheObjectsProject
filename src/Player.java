@@ -1,19 +1,19 @@
 
-
 public class Player extends Creature {
 	String playerName = "";
 	int potions = 0;
-	
+
 	public Player() {
-		
+
 	}
-	
+
 	public Player(int strength, int MaxHP) {
 		this.setPlayerName(playerName);
 		this.setStrength(5);
 		this.setMaxHP(50);
-			
+
 	}
+
 	public String getPlayerName() {
 		return playerName;
 	}
@@ -31,8 +31,7 @@ public class Player extends Creature {
 	}
 
 	public String getInfo() {
-//		System.out.println(maxHP);
-		return  playerName+" has " +maxHP+ "/"+maxHP+"HP";
+		return playerName + " has " + maxHP + "/" + maxHP + "HP";
 	}
-	
+
 }

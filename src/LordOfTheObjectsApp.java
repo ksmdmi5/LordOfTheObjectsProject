@@ -125,30 +125,29 @@ public class LordOfTheObjectsApp {
 						+ " has " + monsterHP + "/" + monster.maxHP + "HP");
 			} else if (fight.equalsIgnoreCase("B")) {
 				System.out.println("You block the blow.");
-			}
-			 else if (monsterHP <= 0) {
-			System.out.println("----------------------------------------------");
-			System.out.println("*                                            *");
-			System.out.println("|   Your enemy lies defeated at your feet.   |");
-			System.out.println("*                                            *");
-			System.out.println("|      \"Y\" to continue the journey.       |");
-			System.out.println("*                                            *");
-			System.out.println("|              Or \"N\" to quit.               |");
-			System.out.println("----------------------------------------------");
-			String next = kb.next();
-			player.maxHP = playerHP;
-			if (next.equalsIgnoreCase("y")) {
-				
-			} else if (next.equalsIgnoreCase("n")) {
-				
-				System.out.print("Goodbye..... coward");
-				System.exit(0);
-			}
+			} else if (monsterHP <= 0) {
+				System.out.println("----------------------------------------------");
+				System.out.println("*                                            *");
+				System.out.println("|   Your enemy lies defeated at your feet.   |");
+				System.out.println("*                                            *");
+				System.out.println("|      \"Y\" to continue the journey.       |");
+				System.out.println("*                                            *");
+				System.out.println("|              Or \"N\" to quit.               |");
+				System.out.println("----------------------------------------------");
+				String next = kb.next();
+				player.maxHP = playerHP;
+				if (next.equalsIgnoreCase("y")) {
+
+				} else if (next.equalsIgnoreCase("n")) {
+
+					System.out.print("Goodbye..... coward");
+					System.exit(0);
+				}
 				int monsterDamage = monster.dealDamage();
 				playerHP = playerHP - monsterDamage;
 				System.out.println(monster.getName() + " attacks for " + monsterDamage + " damage. " + player.playerName
 						+ " has " + playerHP + "/" + player.maxHP + "HP");
-			 } else if (playerHP <= 0) {
+			} else if (playerHP <= 0) {
 
 				System.out.println("You're dead " + player.playerName);
 				System.exit(0);

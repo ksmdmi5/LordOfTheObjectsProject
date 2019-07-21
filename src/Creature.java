@@ -15,13 +15,11 @@ public class Creature {
 	public Creature() {
 	}
 
-	
-
 	public Creature(String name, int strength, int maxHP) {
 		this.name = name;
 		this.strength = strength;
 		this.maxHP = maxHP;
-		
+
 	}
 
 	public String getName() {
@@ -55,9 +53,9 @@ public class Creature {
 	public void setMaxHP(int maxHP) {
 		this.maxHP = maxHP;
 	}
-	
-	public int dealDamage () {
-		return ((int)(Math.random()*strength)+1);
+
+	public int dealDamage() {
+		return ((int) (Math.random() * strength) + 1);
 	}
 
 }
