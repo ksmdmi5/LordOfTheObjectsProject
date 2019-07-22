@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class LordOfTheObjectsApp {
@@ -123,31 +124,32 @@ public class LordOfTheObjectsApp {
 				monsterHP = monsterHP - playerDamage;
 				System.out.println(player.playerName + " attacks for " + playerDamage + " damage. " + monster.getName()
 						+ " has " + monsterHP + "/" + monster.maxHP + "HP");
-			} else if (fight.equalsIgnoreCase("B")) {
-				System.out.println("You block the blow.");
-			} else if (monsterHP <= 0) {
-				System.out.println("----------------------------------------------");
-				System.out.println("*                                            *");
-				System.out.println("|   Your enemy lies defeated at your feet.   |");
-				System.out.println("*                                            *");
-				System.out.println("|      \"Y\" to continue the journey.       |");
-				System.out.println("*                                            *");
-				System.out.println("|              Or \"N\" to quit.               |");
-				System.out.println("----------------------------------------------");
-				String next = kb.next();
-				player.maxHP = playerHP;
-				if (next.equalsIgnoreCase("y")) {
-
-				} else if (next.equalsIgnoreCase("n")) {
-
-					System.out.print("Goodbye..... coward");
-					System.exit(0);
-				}
 				int monsterDamage = monster.dealDamage();
-				playerHP = playerHP - monsterDamage;
+				playerHP = playerHP - monsterDamage; //MOVED***
 				System.out.println(monster.getName() + " attacks for " + monsterDamage + " damage. " + player.playerName
 						+ " has " + playerHP + "/" + player.maxHP + "HP");
-			} else if (playerHP <= 0) {
+				player.maxHP = playerHP;//MOVED***
+			} else if (fight.equalsIgnoreCase("B")) {
+				System.out.println("You block the blow.");
+			}
+			 else if (monsterHP <= 0) {
+			System.out.println("----------------------------------------------");
+			System.out.println("*                                            *");
+			System.out.println("|   Your enemy lies defeated at your feet.   |");
+			System.out.println("*                                            *");
+			System.out.println("|      \"Y\" to continue the journey.       |");
+			System.out.println("*                                            *");
+			System.out.println("|              Or \"N\" to quit.               |");
+			System.out.println("----------------------------------------------");
+			String next = kb.next();
+			if (next.equalsIgnoreCase("y")) {
+				
+			} else if (next.equalsIgnoreCase("n")) {
+				
+				System.out.print("Goodbye..... coward");
+				System.exit(0);
+			}
+			 } else if (playerHP <= 0) {
 
 				System.out.println("You're dead " + player.playerName);
 				System.exit(0);
@@ -182,7 +184,7 @@ public class LordOfTheObjectsApp {
 		System.out.println("-------------------------------------");
 		String well = kb.next();
 		if (well.equalsIgnoreCase("Y")) {
-			System.out.println("u\2603");
+			System.out.println("\u2603");
 			System.out.println("WTF?");
 		} else {
 			System.out.println("You can't handel the MacGuffin!");
@@ -191,3 +193,4 @@ public class LordOfTheObjectsApp {
 	}
 
 } // public class
+
